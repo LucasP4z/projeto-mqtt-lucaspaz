@@ -2,5 +2,5 @@
 **OBJETIVO**
 
 
-![GitHub Logo](/Este Computador/Documentos/LUCAS TRABALHOS/projetos do arduino.png)
+![GitHub Logo](/images/logo.png)
 Format: ![Alt Text](url)
