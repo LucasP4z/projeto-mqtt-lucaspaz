@@ -19,7 +19,7 @@ void setup() {
   Serial.begin(9600);   //inicia o monitor serial//
 
   pinMode(pino2,INPUT_PULLUP);  //define o pino2 como entrada//
-  mqttClient.setServer("3.82.94.158",1883); //define o ip e a porta TCP que vai ser utilizado para o acesso do broker MQTT//
+  mqttClient.setServer("54.144.190.205",1883); //define o ip e a porta TCP que vai ser utilizado para o acesso do broker MQTT//
   
   //exibe no monitor serial o IP do arduino//
   Serial.print("O IP do arduino e: "); 
@@ -34,7 +34,6 @@ void setup() {
   Serial.println(Ethernet.gatewayIP());
 
   
-  delay(5000); //espere 5 segundos//
 }
 
 void loop() {
@@ -57,6 +56,5 @@ void loop() {
  }
 
  mqttClient.loop(); 
- delay(2000); //espere 2 segundos//
-
+ 
 }
