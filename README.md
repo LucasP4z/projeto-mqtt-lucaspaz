@@ -1,7 +1,7 @@
 # projeto-mqtt-lucaspaz
 **OBJETIVO**
 
-Objetivo deste projeto, é fazer com que o arduino possa mandar a informação que está o Rack para ver se ele está **ABERTO** ou **FECHADO**, para mandar pro Servidor Broker MQTT(*Message Queuing Telemetry Transport*) hospedado na *Amazon Web Service*(AWS) e partir da ai conseguimos receber a informação que está o Rack através do aplicativo MQTT Dash instalado no smartphone.
+Objetivo deste projeto, é fazer com que o arduino possa mandar a informação que está o Rack para ver se ele está **ABERTO** ou **FECHADO**, para mandar pro Servidor Broker MQTT(*Message Queuing Telemetry Transport*) hospedado na *Amazon Web Service*(AWS) e a partir da ai conseguimos receber a informação que está o Rack através do aplicativo MQTT Dash instalado no smartphone.
 
 ![projeto do arduino](https://github.com/Nogueirinha1961/projeto-mqtt-lucaspaz/blob/main/projeto%20do%20arduino.PNG)
 
