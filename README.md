@@ -5,7 +5,7 @@ Objetivo deste projeto, é fazer com que o arduino possa mandar a informação q
 
 ![projeto do arduino](https://github.com/Nogueirinha1961/projeto-mqtt-lucaspaz/blob/main/projeto%20do%20arduino.PNG)
 
-**Atribui duas bibliotecas para conseguir fazer o projeto, são elas:**
+**Atribui duas bibliotecas para executar o projeto, são elas:**
 
 [UIPEthernet](https://github.com/UIPEthernet/UIPEthernet/archive/v2.0.9.zip&ust=1612376100000000&usg=AOvVaw1CHCYcbTZoY5fZ6OHF_K2b&hl=pt-BR) (que possibilitará a comunicação do arduino e ENC28J60, que fará se conectar a internet)
 
