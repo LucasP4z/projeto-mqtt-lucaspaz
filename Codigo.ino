@@ -10,7 +10,7 @@ bool estado_sensor; //declarei a variável estado_sensor como o tipo bool pois e
 int pino2 = 2; //declarei o pino utlizado do sensor magnético como pino2 para ficar mais organizado//
 
 
-EthernetClient client; // inicia o cliente Ethernet
+EthernetClient client; // inicia o cliente Ethernet//
 PubSubClient mqttClient (client); //inicia o cliente MQTT//
 
 void setup() {
@@ -19,13 +19,13 @@ void setup() {
   Serial.begin(9600);   //inicia o monitor serial//
 
   pinMode(pino2,INPUT_PULLUP);  //define o pino2 como entrada//
-  mqttClient.setServer("3.82.94.158",1883); //define o ip e a porta TCP que vai ser utilizado para o acesso do broker MQTT
+  mqttClient.setServer("3.82.94.158",1883); //define o ip e a porta TCP que vai ser utilizado para o acesso do broker MQTT//
   
-  //exibe no monitor serial serial o IP do arduino//
+  //exibe no monitor serial o IP do arduino//
   Serial.print("O IP do arduino e: "); 
   Serial.println(Ethernet.localIP());
 
-  //exibe no monitor serial o mac do arduino//
+  //exibe no monitor serial a máscara de rede do arduino//
   Serial.print("A mascara de Rede do arduino e: ");
   Serial.println(Ethernet.subnetMask());
   
@@ -42,14 +42,14 @@ void loop() {
   estado_sensor = digitalRead(pino2); //o digitalRead vai ler o pino2 e vai ler se ele esta aberto ou fechado(1 ou 0)// 
   mqttClient.connect("lucaspaz"); //define o nome do cliente MQTT//
 
- //se esta ação for acontecer ele irá exibir no aplicativo "RACK FECHADO"// 
+ //se esta ação for verdadeira ele irá exibir no aplicativo "RACK FECHADO"// 
  if (estado_sensor == 0){
   
   
   mensagem = mqttClient.publish("lucaspaz-t","RACK FECHADO"); //variável que envia mensagem ao servidor e depois ao aplicativo//
  }
  
- //se esta ação for acontecer ele irá exibir no aplicativo "RACK ABERTO"
+ //se esta ação for verdadeira ele irá exibir no aplicativo "RACK ABERTO"//
  if (estado_sensor == 1){
    mensagem = mqttClient.publish("lucaspaz-t","RACK ABERTO"); //variável que envia mensagem ao servidor e depois ao aplicativo//
  
