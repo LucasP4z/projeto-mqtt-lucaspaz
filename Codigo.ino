@@ -41,16 +41,16 @@ void loop() {
   estado_sensor = digitalRead(pino2); //o digitalRead vai ler o pino2 e vai ler se ele esta aberto ou fechado(1 ou 0)// 
   mqttClient.connect("lucaspaz"); //define o nome do cliente MQTT//
 
- //se esta ação for verdadeira ele irá exibir no aplicativo "RACK FECHADO"// 
+ //se esta ação for verdadeira ele irá exibir no aplicativo que o rack esta fechado// 
  if (estado_sensor == 0){
   
   
-  mensagem = mqttClient.publish("lucaspaz-t","RACK FECHADO"); //variável que envia mensagem ao servidor e depois ao aplicativo//
+  mensagem = mqttClient.publish("lucaspaz-t","0"); //variável que envia mensagem ao servidor e depois ao aplicativo//
  }
  
- //se esta ação for verdadeira ele irá exibir no aplicativo "RACK ABERTO"//
+ //se esta ação for verdadeira ele irá exibir no aplicativo que o rack está aberto//
  if (estado_sensor == 1){
-   mensagem = mqttClient.publish("lucaspaz-t","RACK ABERTO"); //variável que envia mensagem ao servidor e depois ao aplicativo//
+   mensagem = mqttClient.publish("lucaspaz-t","1"); //variável que envia mensagem ao servidor e depois ao aplicativo//
  
 
  }
