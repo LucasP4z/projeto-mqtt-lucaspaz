@@ -38,7 +38,7 @@ void setup() {
 
 void loop() {
 
-  estado_sensor = digitalRead(pino2);     //o digitalRead vai ler o pino2 e vai ler se ele esta aberto ou fechado(1 ou 0)// 
+  estado_sensor = digitalRead(pino2);      //o digitalRead vai ler o pino2 e vai ler se ele esta aberto ou fechado(1 ou 0)// 
   mqttClient.connect("lucaspaz");         //define o nome do cliente MQTT//
 
  //se esta ação for verdadeira ele irá exibir no aplicativo que o rack esta fechado// 
@@ -52,9 +52,9 @@ void loop() {
  //se esta ação for verdadeira ele irá exibir no aplicativo que o rack está aberto//
  if (estado_sensor == 1){
   
-   Serial.println("O RACK ESTÁ ABERTO!");              //vai exibir no monitor serial o estado do Rack//
+   Serial.println("O RACK ESTÁ ABERTO!");               //vai exibir no monitor serial o estado do Rack//
    mensagem = mqttClient.publish("lucaspaz-t","1");    //variável que envia mensagem ao servidor e depois ao aplicativo//
-   Serial.println(mensagem);
+   Serial.println(mensagem);                          //ela exibe se a mensagem esta indo para o cliente, se for 1 é porque chegou, 0 é porque a mensagem falhou//
  }
 
  mqttClient.loop();                                   //esta função sempre verifica a conexão entre o cliente e o broker//
