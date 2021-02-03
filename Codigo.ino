@@ -46,6 +46,7 @@ void loop() {
   
   Serial.println("O RACK ESTÁ FECHADO!");               //vai exibir no monitor serial o estado do Rack//
   mensagem = mqttClient.publish("lucaspaz-t","0");     //variável que envia mensagem ao servidor e depois ao aplicativo//
+  Serial.println(mensagem); 
  }
  
  //se esta ação for verdadeira ele irá exibir no aplicativo que o rack está aberto//
@@ -53,7 +54,7 @@ void loop() {
   
    Serial.println("O RACK ESTÁ ABERTO!");              //vai exibir no monitor serial o estado do Rack//
    mensagem = mqttClient.publish("lucaspaz-t","1");    //variável que envia mensagem ao servidor e depois ao aplicativo//
- 
+   Serial.println(mensagem);
  }
 
  mqttClient.loop();                                   //esta função sempre verifica a conexão entre o cliente e o broker//
