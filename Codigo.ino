@@ -44,15 +44,16 @@ void loop() {
  //se esta ação for verdadeira ele irá exibir no aplicativo que o rack esta fechado// 
  if (estado_sensor == 0){
   
-  
+  Serial.println("O RACK ESTÁ FECHADO!");//vai exibir no monitor serial o estado do Rack//
   mensagem = mqttClient.publish("lucaspaz-t","0"); //variável que envia mensagem ao servidor e depois ao aplicativo//
  }
  
  //se esta ação for verdadeira ele irá exibir no aplicativo que o rack está aberto//
  if (estado_sensor == 1){
+  
+   Serial.println("O RACK ESTÁ ABERTO!");//vai exibir no monitor serial o estado do Rack//
    mensagem = mqttClient.publish("lucaspaz-t","1"); //variável que envia mensagem ao servidor e depois ao aplicativo//
  
-
  }
 
  mqttClient.loop(); 
